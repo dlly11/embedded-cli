@@ -99,7 +99,7 @@ fn main() -> ! {
 
     info!("Entering loop");
     loop {
-        if usb_dev.poll(&mut [&mut serial.serial_port]) {
+        if usb_dev.poll(&mut [&mut serial]) {
             cli.run(&mut serial);
         }
     }
